@@ -1,0 +1,14 @@
+extends layout
+mixin navbar
+    nav.navbar.is-fixed-top
+        .container
+            .navbar-brand
+                a.navbar-item Sample Application
+                .navbar-burger.burger#navbarBurger(data-target="navMenuDocumentation")
+                    span
+                    span
+                    span
+            .navbar-menu#navMenuDocumentation
+                .navbar-end
+                    a.navbar-item Calculator
+                    a.navbar-item Login

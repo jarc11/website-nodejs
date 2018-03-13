@@ -1,4 +1,13 @@
 extends layout
 
 block content
-    h1 Admin Page
+  include navbar.pug
+  include footer.pug
+
+  body.page-layout
+    +navbar
+    section.hero.is-link
+      .hero-body
+        h1.title The Admin Thing
+        h2.subtitle Something about the admin thing
+    +footer      

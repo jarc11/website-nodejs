@@ -1,5 +1,28 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  include navbar.pug
+  include footer.pug
+
+  body.page-layout
+    +navbar
+    section.hero.is-info
+      .hero-body
+        h1.title The Main Thing
+        h2.subtitle Something about the main thing
+    section.hero
+      .container
+        .hero-body
+          h1.title The First Section
+          h2.subtitle Something about this section
+          hr
+    section.hero
+      .container
+        .columns
+          .column.is-half
+            p that
+          .column
+            p this
+          .column
+            p this and that
+    +footer
