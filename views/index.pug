@@ -7,22 +7,22 @@ block content
   body.page-layout
     +navbar
     section.hero.is-info
-      .hero-body
-        h1.title The Main Thing
-        h2.subtitle Something about the main thing
-    section.hero
-      .container
+      .container.is-fullhd
         .hero-body
-          h1.title The First Section
-          h2.subtitle Something about this section
-          hr
+          h1.title The Main Thing
+          h2.subtitle Something about the main thing
     section.hero
-      .container
-        .columns
-          .column.is-half
-            p that
-          .column
-            p this
-          .column
-            p this and that
+      .container.is-fullhd
+        .hero-body
+          .box
+            form(action="/api/users/login" method="POST")
+              .field
+                p.control
+                  input.input(type="email" placeholder="Email")
+              .field
+                p.control
+                  input.input(type="password" placeholder="Password")
+              .field
+                p.control
+                  button.button.is-success Login
     +footer

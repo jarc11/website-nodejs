@@ -1,7 +1,7 @@
 var models = require("../../models");
 var express = require('express');
 var bcrypt = require('bcryptjs');
-//var jwt = require('jsonwebtoken');
+
 var apiRouter = express.Router();
 
 /* logout */
