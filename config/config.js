@@ -1,9 +1,9 @@
 module.exports = {
     development: {
-        username: "",
-        password: "",
-        database: "",
-        host: "",
+        username: "spring_test_webapp",
+        password: "kj945S!Df48345£d",
+        database: "spring_test",
+        host: "localhost",
         dialect: 'mysql',
       },
     production: {
