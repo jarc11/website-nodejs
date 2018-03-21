@@ -2,27 +2,49 @@ extends layout
 
 block content
   include navbar.pug
-  include footer.pug
 
   body.page-layout
     +navbar
     section.hero.is-info
       .container.is-fullhd
         .hero-body
-          h1.title The Main Thing
-          h2.subtitle Something about the main thing
+          h1.title Sample Application
+          h2.subtitle Thanks for coming, please see the description below for more information.
     section.hero
-      .container.is-fullhd
+      .container
         .hero-body
-          .box
-            form(action="/api/users/login" method="POST")
-              .field
-                p.control
-                  input.input(type="email" placeholder="Email")
-              .field
-                p.control
-                  input.input(type="password" placeholder="Password")
-              .field
-                p.control
-                  button.button.is-success Login
-    +footer
+          .content
+            h1.title Description
+            h3.subtitle Welcome to my example application.
+            p This web application is served up using Node.js on the Express middleware, backed by a Java REST API, using the following frameworks and technologies/tools:
+            ul
+              li Spring Boot              
+              li Hibernate
+              li MySQL Database
+              li HTML - Using the <strong><a href="https://pugjs.org">Pug templating engine</a></strong>)
+              li CSS - using the <strong><a href="https://bulma.io">Bulma.io framework</a></strong>)
+              
+            h3.subtitle Take a look at source code, available on my github repositories:
+            ul
+              li 
+                a(href="https://github.com/jarc11/website-nodejs") https://github.com/jarc11/website-nodejs
+              li 
+                a(href="https://github.com/jarc11/spring-rest-example") https://github.com/jarc11/spring-rest-example
+    section.hero
+      .container
+        .hero-body
+          h1.title Battery Calculator
+          h3.subtitle Fill out some values and hit submit.
+          .message.is-info 
+            .message-header
+              p If you're logged in, you'll have the option to save your results.
+            .message-body
+              p If you're logged in, you'll have the option to save your results.              
+          .content
+            h4.subtitle Fire Alarm Battery Calculator
+            .box
+              form#calcForm
+                .field
+                  label.label Some value
+                  .control
+                    input.input(type="text")

@@ -1,14 +1,19 @@
 extends layout
 mixin navbar
     nav.navbar.is-fixed-top
-        .container.is-fullhd
+        .container.is-fluid
             .navbar-brand
-                a.navbar-item Sample Application
+                a.navbar-item(href="/") jarc11.com - Sample Application
+                a.navbar-item(href="https://github.com/jarc11")
+                    img(src="/images/githublog.svg")
+                a.navbar-item(href="https://www.linkedin.com/in/james-claydon-0800705b/")
+                    img(src="/images/linkedin.png")
                 .navbar-burger.burger#navbarBurger(data-target="navMenuDocumentation")
                     span
                     span
                     span
             .navbar-menu#navMenuDocumentation
                 .navbar-end
-                    a.navbar-item Calculator
-                    a.navbar-item Login
+                    a.navbar-item(href="/") Calculator
+                    a.navbar-item(href="/account") Account
+                    a.navbar-item.is-warning(href="/login") Login

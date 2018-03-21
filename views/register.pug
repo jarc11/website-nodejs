@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  include navbar.pug
+
+  body.page-layout
+    +navbar
+    section.hero.is-link
+      .container.is-fullhd
+        .hero-body
+          h1.title Account Registration
+          h2.subtitle Sign up for an account to store your results.
+    .section.hero
+      .container.is-fullhd
+        .hero-body
+          .box
+            form#regForm

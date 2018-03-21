@@ -6,8 +6,16 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Sample App' });
 });
 
-router.get('/admin', function(req, res, next) {
-  res.render('admin');
+router.get('/account', function(req, res, next) {
+  res.render('account');
+});
+
+router.get('/login', function(req, res, next) {
+  res.render('login');
+});
+
+router.get('/register', function(req, res, next) {
+  res.render('register');
 });
 
 module.exports = router;

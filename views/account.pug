@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  include navbar.pug
+
+  body.page-layout
+    +navbar
+    section.hero.is-info
+      .container.is-fullhd
+        .hero-body
+          h1.title The Main Thing
+          h2.subtitle Something about the main thing
+    section.hero
+      .container.is-fullhd
+        .hero-body

@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  include navbar.pug
+
+  body.page-layout
+    +navbar
+    section.hero.is-info
+      .container.is-fullhd
+        .hero-body
+          h1.title The Main Thing
+          h2.subtitle Something about the main thing
+    section.hero
+      .container.is-fullhd
+        .hero-body
+          .box
+            form#loginForm
+              .field
+                p.control
+                  input.input(type="email" placeholder="Email")
+              .field
+                p.control
+                  input.input(type="password" placeholder="Password")
+              .field
+                p.control
+                  button.button.is-success Login
+            p Haven't got an account? 
+              a(href="/register") Register here
