@@ -7,7 +7,6 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var bcrypt = require('bcryptjs');
 
 var users = require('./routes/api/users');
 var index = require('./routes/ui/index');

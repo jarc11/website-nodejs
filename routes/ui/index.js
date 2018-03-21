@@ -3,19 +3,23 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Sample App' });
+  res.render('index', {title: 'Home', loggedIn: loggedIn(req)});
 });
 
 router.get('/account', function(req, res, next) {
-  res.render('account');
+  res.render('account', {title: 'My Account', loggedIn: loggedIn(req)});
 });
 
 router.get('/login', function(req, res, next) {
-  res.render('login');
+  res.render('login', {title: 'Login', loggedIn: loggedIn(req)});
 });
 
 router.get('/register', function(req, res, next) {
-  res.render('register');
+  res.render('register', {title: 'Register', loggedIn: loggedIn(req)});
 });
+
+function loggedIn(req) {
+  return (req.session.user === undefined ? false : true);
+}
 
 module.exports = router;
