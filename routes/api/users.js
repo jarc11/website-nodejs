@@ -38,7 +38,10 @@ apiRouter.post('/login', function (req, res, next) {
     response.on('end', () => {
       try {
         const parsedData = JSON.parse(responseString);
-        res.json(parsedData);
+        if (parsedData.passwordCorrect) {
+          sess.username = req.body.username;
+          res.json(parsedData);
+        }
       } catch (e) {
         res.send(e.message);
         console.error(e.message);
@@ -67,8 +70,6 @@ apiRouter.post('/register', function (req, res) {
   }).catch(function(error){
     console.log(error);
   })
-
-
 });
 
 module.exports = apiRouter;

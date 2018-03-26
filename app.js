@@ -25,7 +25,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({ secret: config.secret, resave: false, saveUninitialized: true }));
+app.use(session({
+  cookieName: 'session',
+  secret: config.secret,
+  duration: 30 * 60 * 1000,
+  activeDuration: 5 * 60 * 1000,
+  saveUninitialized: true,
+  resave: true
+}));
 
 app.use('/', index);
 app.use('/api/users', users);

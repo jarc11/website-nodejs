@@ -18,8 +18,13 @@ router.get('/register', function(req, res, next) {
   res.render('register', {title: 'Register', loggedIn: loggedIn(req)});
 });
 
+router.get('/logout', function(req, res, next){
+  req.session.username = undefined;
+  res.render('index', {title: 'Home', loggedIn: loggedIn(req)});
+})
+
 function loggedIn(req) {
-  return (req.session.user === undefined ? false : true);
+  return (req.session.username === undefined ? false : true);
 }
 
 module.exports = router;

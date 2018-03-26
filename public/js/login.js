@@ -11,7 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
             url:'/api/users/login',
             data: request
         }).done(function(data) {
-            alert(data.passwordCorrect);
+            if(data.passwordCorrect) {
+                window.location.replace("/account");
+            }
         })
     });
 
