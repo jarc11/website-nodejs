@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
             $('#storefields').fadeToggle('2000');
     })
 
-    if (document.getElementById("cookie").value === "true") {
+    if (document.getElementById("cookie").innerText === "true") {
         document.getElementById('storageContainer').style.display = "flex";
     }
     

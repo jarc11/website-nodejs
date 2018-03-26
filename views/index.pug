@@ -71,13 +71,13 @@ block content
                     .field
                       .control
                         <label class="checkbox"><input type="checkbox" id="store"> Store Results?</label>
-                    .field#storefields
-                      .field
-                        .control
-                          input.input(type="text" placeholder="Enter a unique test identifier")
-                      .field
-                        .control
-                          input.input(type="text" placeholder="Enter a description for this test (e.g. location)")
+                  #storefields.field
+                    .field
+                      .control
+                        input.input(type="text" placeholder="Enter a unique test identifier")
+                    .field
+                      .control
+                        input.input(type="text" placeholder="Enter a description for this test (e.g. location)")
                   .field
                     .control
                       button.button.is-dark(submit) Calculate
